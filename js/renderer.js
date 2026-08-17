@@ -387,15 +387,7 @@ export class Renderer {
     const aspect = this.size.w / this.size.h;
     sim.setAspect(aspect);
     this.writeUniforms(sim, dt);
-    if (segmentCount > 0) {
-      this.device.queue.writeBuffer(
-        this.segmentBuffer,
-        0,
-        this.segmentData,
-        0,
-        segmentCount * 32
-      );
-    }
+    this.device.queue.writeBuffer(this.segmentBuffer, 0, this.segmentData);
 
     const prev = this.fieldIndex;
     const curr = 1 - prev;
