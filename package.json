@@ -1,0 +1,10 @@
+{
+  "name": "closed-eye",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Closed-Eye — a WebGPU artwork of retinal scintillation, phosphenes and vitreous floaters.",
+  "scripts": {
+    "start": "python3 -m http.server 8080 --bind 0.0.0.0"
+  }
+}
